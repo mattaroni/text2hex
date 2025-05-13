@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2024"
 description = "Converts command-line input (UTF-8) into hexadecimal"
 license = "MIT"
+publish = false # for now at least
 
 [dependencies]
