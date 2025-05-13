@@ -8,9 +8,13 @@ fn main() {
     [TODO] Replace bare-bones args resolving code with a dedicated args
     resolving implementer, preferably from a separate rust file in `/src`
     */
+    
+    if args.len() <= 1 {
+        return; // if there's no argument given, end program
+    }
 
     // gets text input
-    let text = args[1].clone();
+    let text = &args[1];
     
     // converts text into an u8 vector
     let bytes: Vec<u8> = text.bytes().collect();
