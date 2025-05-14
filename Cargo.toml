@@ -1,6 +1,6 @@
 [package]
 name = "text2hex"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2024"
 description = "Converts command-line input (UTF-8) into hexadecimal"
 repository = "https://github.com/mattaroni/text2hex"
@@ -8,3 +8,4 @@ license = "MIT"
 publish = false # for now at least
 
 [dependencies]
+clap = { version = "4.5.38", features = ["derive"] }

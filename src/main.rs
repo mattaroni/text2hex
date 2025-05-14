@@ -1,23 +1,17 @@
-use std::env;
+use clap::Parser;
+
+#[derive(Parser, Debug)]
+#[command(version, about, long_about = None)]
+struct Args {
+    /// the text to be converted into hexadecimal
+    text: String,
+}
 
 fn main() {
-    // extracts command line arguments
-    let args: Vec<String> = env::args().collect();
-
-    /*
-    [TODO] Replace bare-bones args resolving code with a dedicated args
-    resolving implementer, preferably from a separate rust file in `/src`
-    */
-    
-    if args.len() <= 1 {
-        return; // if there's no argument given, end program
-    }
-
-    // gets text input
-    let text = &args[1];
+    let args = Args::parse();
     
     // converts text into an u8 vector
-    let bytes: Vec<u8> = text.bytes().collect();
+    let bytes: Vec<u8> = args.text.bytes().collect();
 
     // chunks the vector into slices of 16
     let byte_chunks: Vec<&[u8]> = bytes.chunks(16).collect();

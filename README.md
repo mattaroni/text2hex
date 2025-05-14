@@ -34,10 +34,15 @@ The binary will be located in `target/debug/` under the name `text2hex`.
 The binary has the following usage synopsis:
 
 ```
-text2hex [STRING]
+text2hex <TEXT>
 ```
 
-As of version `0.1.0`, there are no "option" arguments (e.g. `--help`,
-`--version`). This functionality will be added in a later version.
+As of version `0.2.0`, there are currently 2 command-line options you may pass
+instead of `<TEXT>`. These are:
+
+- **Help** (`-h`/`--help`): prints a useful "help" message, explaining what the
+  binary does and what command-line arguments it takes.
+- **Version** (`-V`/`--version`): prints the version number of the downloaded
+  binary.
 
 [releases page]: https://github.com/mattaroni/text2hex/releases
