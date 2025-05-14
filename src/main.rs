@@ -30,7 +30,7 @@ fn main() {
         let mut hex_chunk = String::new();
 
         for byte in byte_chunk {
-            let hex = format!("{:x} ", byte);
+            let hex = format!("{:02x} ", byte);
             hex_chunk.push_str(&hex);
         }
 

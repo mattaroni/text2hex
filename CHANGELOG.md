@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2025-05-14
+
+### Fixed
+- Patched an issue where characters in the `00`-`0f` byte range were rendered
+  in hexadecimal without the leading `0` digit. For example, the line feed
+  character `U+000a` would be represented as `a` instead of `0a`. This is now
+  fixed.
+
 ## [0.1.0] - 2025-05-13
 
 ### Added
@@ -11,4 +19,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Essential documentation (readme, license, changelog, & cargo file).
 - Availability on [GitHub](https://github.com/mattaroni/text2hex).
 
+[0.1.1]: https://github.com/mattaroni/text2hex/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/mattaroni/text2hex/releases/tag/v0.1.0
