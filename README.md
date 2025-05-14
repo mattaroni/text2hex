@@ -2,7 +2,7 @@
 ![version](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmattaroni%2Ftext2hex%2Frefs%2Fheads%2Fmain%2FCargo.toml&query=%24.package.version&label=version)
 ![license](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmattaroni%2Ftext2hex%2Frefs%2Fheads%2Fmain%2FCargo.toml&query=%24.package.license&label=version&color=blueviolet)
 
-Converts command-line input (UTF-8) into hexadecimal
+Converts command-line input (UTF-8) into hexadecimal.
 
 > [!WARNING]
 > This is solely a pet-project of mine; a short, fun warmup for me to practice
@@ -12,7 +12,8 @@ Converts command-line input (UTF-8) into hexadecimal
 > Use this code (and the associated binaries) at your own discretion.
 
 ## Download
-You can download the Text2Hex binary from the [releases page] on GitHub.
+You can download the Text2Hex binary from the [releases page](https://github.com/mattaroni/text2hex/releases)
+on GitHub.
 
 ## Build from source
 Text2Hex requires the following tools to build:
@@ -44,5 +45,3 @@ instead of `<TEXT>`. These are:
   binary does and what command-line arguments it takes.
 - **Version** (`-V`/`--version`): prints the version number of the downloaded
   binary.
-
-[releases page]: https://github.com/mattaroni/text2hex/releases
