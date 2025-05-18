@@ -13,34 +13,31 @@ fn main() {
     // converts text into an u8 vector
     let bytes: Vec<u8> = args.text.bytes().collect();
 
+    // the number of bytes represented per line in the terminal.
+    let width: usize = 16;
+
     // chunks the vector into slices of 16
     let byte_chunks: Vec<&[u8]> = bytes.chunks(16).collect();
 
-    // initializes a string vector containing the hex values of each byte in
-    // byte_chunks
-    let mut hex_chunks: Vec<String> = Vec::new();
-
     for byte_chunk in byte_chunks {
-        let mut hex_chunk = String::new();
+        // every byte will be represented by 2 hexadecimal digits, followed by a
+        // space (a total of 3 characters each). The 8th byte will be followed
+        // by 2 spaces instead of 1 (+1), and the last byte will be followed by
+        // no spaces (-1).
+        let mut hex_line = String::with_capacity(width * 3);
 
         for byte in byte_chunk {
             let hex = format!("{:02x} ", byte);
-            hex_chunk.push_str(&hex);
+            hex_line.push_str(&hex);
         }
 
         // trims trailing whitespace
-        hex_chunk = hex_chunk.trim_end().to_string();
+        hex_line.remove(hex_line.len() - 1);
+        
+        if 23 < hex_line.len() {
+            hex_line.insert(23, ' ');
+        }
 
-        // forces double-space (instead of a single-space) after the first 8
-        // bytes, but only if the hex_chunk has at least 8 hex bytes
-        hex_chunk = match hex_chunk.split_at_checked(23) {
-            Some((first, last)) => format!("{first} {last}"),
-            None => hex_chunk,
-        };
-
-        hex_chunks.push(hex_chunk);
+        println!("{}", hex_line);
     }
-
-    // prints the hex_chunks
-    println!("{}", hex_chunks.join("\n"));
 }

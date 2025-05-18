@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2025-05-18
+
+### Changed
+- Switch from printing the hexadecimal bytes all at once to printing them in
+  chunks; this should make the program more memory efficient.
+
 ## [0.2.0] - 2025-05-14
 
 ### Added
@@ -31,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Essential documentation (readme, license, changelog, & cargo file).
 - Availability on [GitHub](https://github.com/mattaroni/text2hex).
 
+[0.2.1]: https://github.com/mattaroni/text2hex/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/mattaroni/text2hex/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/mattaroni/text2hex/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/mattaroni/text2hex/releases/tag/v0.1.0
