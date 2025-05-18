@@ -11,10 +11,6 @@ Converts command-line input (UTF-8) into hexadecimal.
 > 
 > Use this code (and the associated binaries) at your own discretion.
 
-## Download
-You can download the Text2Hex binary from the [releases page](https://github.com/mattaroni/text2hex/releases)
-on GitHub.
-
 ## Build from source
 Text2Hex requires the following tools to build:
 
